@@ -29,19 +29,12 @@ class GildedRose {
                         items[i].quality = items[i].quality - 1;
                     }
                 }
-                // TODO - implement conjured item.
-                // Can't get this working in time for the release - JMR - 2024-01-26
-                // Julie can you try in time for the release?
-                // Hey John, how is a conjured supposed to work?
-                // I think I've got it working. I'll leave it running...
-                // It should be fine...it's not breaking anything
                 if (!items[i].name.equals("Conjured Mama Cakes")) {
                     items[i].quality = items[i].quality--;
                 }
             } else {
                 if (items[i].quality < 50) {
                     items[i].quality = items[i].quality + 1;
-                    // Special handling for Backstage passes here...
                     if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
                         // if Backstage then increase when there are 10 days or less
                         if (items[i].sellIn < 11) {
